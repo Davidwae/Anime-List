@@ -2,6 +2,13 @@
 const nextConfig = {
   /* config options here */
   reactCompiler: true,
+  images: {
+    remotePatterns: [
+      {
+        hostname: "cdn.myanimelist.net",
+      }
+    ]
+  }
 };
 
 export default nextConfig;
