@@ -1,4 +1,4 @@
-import { getApiAnime } from "@/app/api-config/api-config"
+import { getApiAnime } from "@/libs/api-config"
 import VideoPlayer from "@/components/utilities/VideoPlayer"
 import Image from "next/image"
 

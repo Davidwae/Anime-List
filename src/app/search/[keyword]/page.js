@@ -1,4 +1,4 @@
-import { getApiAnime } from "@/app/api-config/api-config";
+import { getApiAnime } from "@/libs/api-config";
 import AnimeList from "@/components/AnimeList";
 import Header from "@/components/AnimeList/header";
 
