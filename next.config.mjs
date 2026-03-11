@@ -5,8 +5,16 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
+        hostname: "myanimelist.net",
+      },
+      {
+        protocol: "https",
         hostname: "cdn.myanimelist.net",
-      }
+      },
+      {
+        hostname: "avatars.githubusercontent.com",
+      },
+      
     ]
   }
 };
