@@ -1,15 +1,18 @@
 "use client"
+
 import { FileSearchIcon } from "@phosphor-icons/react"
-import Link from "next/link"
+import { useRouter } from "next/navigation"
 
 const NotFound = () => {
+    const router = useRouter()
+
     return (
         <div className="min-h-screen max-w-xl mx-auto flex justify-center items-center flex-col">
-            <div className="flex justify-center items-center gap-4">
+            <div className="flex flex-col justify-center items-center gap-4">
                 <FileSearchIcon size={32} className="text-accent" />
                 <h3 className="text-accent text-2xl font-bold">NOT FOUND</h3>
+                <button onClick={() => {router.back()}} className="underline text-primary hover:text-accent" >Kembali</button>
             </div>
-            <Link href={"/"} className="underline text-primary hover:text-accent" >Kembali</Link>
         </div>
     )
 }
