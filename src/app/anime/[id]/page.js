@@ -4,6 +4,8 @@ import Image from "next/image"
 import CollectionButton from "@/components/AnimeList/collectionbutton"
 import { authUserSession } from "@/libs/auth-libs"
 import prisma from "@/libs/prisma"
+import CommentInput from "@/components/AnimeList/CommentInput"
+import CommentBox from "@/components/AnimeList/CommentBox"
 
 const Page = async({params}) => {
 
@@ -51,6 +53,20 @@ const Page = async({params}) => {
                     unoptimized
                 />
                 <p className="text-2xl lg:w-4/5 text-justify">{anime.data.synopsis} </p>
+            </div>
+            <div className="p-4">
+                <h3 className="text-2xl text-primary mb-4">Komentar</h3>
+                <CommentBox 
+                    anime_mal_id={id} />
+                
+                {
+                    user &&
+                    <CommentInput 
+                        anime_mal_id={id} 
+                        user_email={user?.email} 
+                        username={user?.name} 
+                        anime_title={anime.data.title} />
+                }
             </div>
             <div>
                 <VideoPlayer youtubeId={anime.data.trailer.embed_url} />

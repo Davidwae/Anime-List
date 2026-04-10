@@ -51,7 +51,8 @@ export const AnyNull = runtime.AnyNull
 
 
 export const ModelName = {
-  Collection: 'Collection'
+  Collection: 'Collection',
+  Comment: 'Comment'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -81,6 +82,18 @@ export const CollectionScalarFieldEnum = {
 export type CollectionScalarFieldEnum = (typeof CollectionScalarFieldEnum)[keyof typeof CollectionScalarFieldEnum]
 
 
+export const CommentScalarFieldEnum = {
+  id: 'id',
+  anime_mal_id: 'anime_mal_id',
+  user_email: 'user_email',
+  comment: 'comment',
+  username: 'username',
+  anime_title: 'anime_title'
+} as const
+
+export type CommentScalarFieldEnum = (typeof CommentScalarFieldEnum)[keyof typeof CommentScalarFieldEnum]
+
+
 export const SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -105,4 +118,15 @@ export const CollectionOrderByRelevanceFieldEnum = {
 } as const
 
 export type CollectionOrderByRelevanceFieldEnum = (typeof CollectionOrderByRelevanceFieldEnum)[keyof typeof CollectionOrderByRelevanceFieldEnum]
+
+
+export const CommentOrderByRelevanceFieldEnum = {
+  anime_mal_id: 'anime_mal_id',
+  user_email: 'user_email',
+  comment: 'comment',
+  username: 'username',
+  anime_title: 'anime_title'
+} as const
+
+export type CommentOrderByRelevanceFieldEnum = (typeof CommentOrderByRelevanceFieldEnum)[keyof typeof CommentOrderByRelevanceFieldEnum]
 

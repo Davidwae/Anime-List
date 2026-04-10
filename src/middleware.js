@@ -1,3 +1,7 @@
-export { default } from "next-auth/middleware"
+import NextAuthMiddleware from "next-auth/middleware"
 
-export const config = { matcher: ["/users/:path*"] }
+export default NextAuthMiddleware
+
+export const config = {
+  matcher: ["/users/:path*"],
+}
